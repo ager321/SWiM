@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Board Game Helper</string>
+    <string name="dice_button_text">Virtual dices</string>
 </resources>
