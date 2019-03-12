@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">Board Game Helper</string>
     <string name="dice_button_text">Virtual dices</string>
+    <string name="roll_button_text">Roll the dices!</string>
+    <string name="star_realms_button_text">Star realms helper</string>
+    <string name="soon_button_text">Soon</string>
+    <string name="soon_toast_text">More coming soon!</string>
+    <string-array name="dices_array">
+            <item>1 dice</item>
+            <item>2 dices</item>
+            <item>3 dices</item>
+            <item>4 dices</item>
+            <item>5 dices</item>
+            <item>6 dices</item>
+    </string-array>
 </resources>

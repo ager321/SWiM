@@ -1,12 +1,13 @@
 package com.example.boardgamehelper
 
 
+import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.content.Intent
+import android.widget.Toast
 
-const val EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE"
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,12 +16,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
     fun swichToVirtualDice(view: View) {
-        val intent = Intent(this, DiceActivity::class.java).apply {
-            putExtra(EXTRA_MESSAGE,"zmaina")
-        }
+        val intent = Intent(this, DiceActivity::class.java)
         startActivity(intent)
     }
-
+    fun buttonSoonOnClick(view: View)
+    {
+        Toast.makeText(this@MainActivity, R.string.soon_toast_text, Toast.LENGTH_SHORT).show()
+    }
 
 }
 
