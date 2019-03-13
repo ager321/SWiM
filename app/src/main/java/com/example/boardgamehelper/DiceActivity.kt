@@ -5,12 +5,14 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import kotlin.random.Random
-
 class DiceActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dice)
+
+
+
 
         val spinner: Spinner = findViewById(R.id.spinner)
         // Create an ArrayAdapter using the string array and a default spinner layout
@@ -26,7 +28,8 @@ class DiceActivity : AppCompatActivity() {
         }
 
 
-        spinner?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onNothingSelected(parent: AdapterView<*>?) {
 
             }

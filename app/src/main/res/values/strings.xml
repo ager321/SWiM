@@ -5,6 +5,8 @@
     <string name="star_realms_button_text">Star realms helper</string>
     <string name="soon_button_text">Soon</string>
     <string name="soon_toast_text">More coming soon!</string>
+    <string name="two_weeks_toast_text">"I guess in two weeks</string>
+    <string name="dice_starting_one">1</string>
     <string-array name="dices_array">
         <item>1 dice</item>
         <item>2 dices</item>
