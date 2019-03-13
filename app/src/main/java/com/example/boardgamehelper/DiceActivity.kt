@@ -26,13 +26,13 @@ class DiceActivity : AppCompatActivity() {
         }
 
 
-        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+        spinner?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onNothingSelected(parent: AdapterView<*>?) {
 
             }
 
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                val selectedItem = parent.getItemAtPosition(position)
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                val selectedItem = parent?.getItemAtPosition(position)
                 if (selectedItem == "1 dice") {
                     findViewById<TextView>(R.id.dice1).apply {
                         visibility = View.VISIBLE
@@ -97,13 +97,6 @@ class DiceActivity : AppCompatActivity() {
 
     }
 
-    fun View.toggleVisibility() {
-        if (visibility == View.VISIBLE) {
-            visibility = View.INVISIBLE
-        } else {
-            visibility = View.VISIBLE
-        }
-    }
 
 
     fun diceRoll(view: View){
