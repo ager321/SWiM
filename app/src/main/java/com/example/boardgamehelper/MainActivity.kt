@@ -19,6 +19,12 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, DiceActivity::class.java)
         startActivity(intent)
     }
+    fun swichToStarRealmsHelper(view: View) {
+        val intent = Intent(this, StarRealmsHelper::class.java)
+        startActivity(intent)
+    }
+
+
     fun buttonSoonOnClick(view: View)
     {
         Toast.makeText(this@MainActivity, R.string.soon_toast_text, Toast.LENGTH_SHORT).show()
