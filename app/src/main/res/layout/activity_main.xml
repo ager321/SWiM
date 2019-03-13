@@ -11,11 +11,12 @@
         android:background="@drawable/round_button"
         android:layout_height="wrap_content" android:id="@+id/dice_button"
         android:onClick="swichToVirtualDice"/>
-<Button
-        android:text="Button"
-        android:layout_width="match_parent"
-        android:background="@drawable/round_button"
-        android:layout_height="wrap_content" android:id="@+id/button2"/>
+    <Button
+            android:text="@string/star_realms_button_text"
+            android:layout_width="match_parent"
+            android:background="@drawable/round_button"
+            android:layout_height="wrap_content" android:id="@+id/star_realms_button"
+            android:onClick="swichToStarRealmsHelper"/>
 <Button
         android:text="@string/soon_button_text"
         android:layout_width="match_parent"

@@ -2,8 +2,11 @@ package com.example.boardgamehelper
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.TextView
+import kotlin.random.Random
 
 class DiceActivity : AppCompatActivity() {
 
@@ -24,5 +27,21 @@ class DiceActivity : AppCompatActivity() {
             spinner.adapter = adapter
         }
 
+    }
+
+    fun diceRoll(view: View){
+        val randomValues = List(4) { Random.nextInt(1, 7) }
+        findViewById<TextView>(R.id.dice1).apply {
+            text = randomValues[0].toString()
+        }
+        findViewById<TextView>(R.id.dice2).apply {
+            text = randomValues[1].toString()
+        }
+        findViewById<TextView>(R.id.dice3).apply {
+            text = randomValues[2].toString()
+        }
+        findViewById<TextView>(R.id.dice4).apply {
+            text = randomValues[3].toString()
+        }
     }
 }
