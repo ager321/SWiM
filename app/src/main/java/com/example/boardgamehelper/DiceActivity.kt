@@ -3,9 +3,7 @@ package com.example.boardgamehelper
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.TextView
+import android.widget.*
 import kotlin.random.Random
 
 class DiceActivity : AppCompatActivity() {
@@ -15,7 +13,7 @@ class DiceActivity : AppCompatActivity() {
         setContentView(R.layout.activity_dice)
 
         val spinner: Spinner = findViewById(R.id.spinner)
-// Create an ArrayAdapter using the string array and a default spinner layout
+        // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter.createFromResource(
             this,
             R.array.dices_array,
@@ -27,7 +25,86 @@ class DiceActivity : AppCompatActivity() {
             spinner.adapter = adapter
         }
 
+
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+
+            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+                val selectedItem = parent.getItemAtPosition(position)
+                if (selectedItem == "1 dice") {
+                    findViewById<TextView>(R.id.dice1).apply {
+                        visibility = View.VISIBLE
+                    }
+                    findViewById<TextView>(R.id.dice2).apply {
+                        visibility = View.INVISIBLE
+                    }
+                    findViewById<TextView>(R.id.dice3).apply {
+                        visibility = View.INVISIBLE
+                    }
+                    findViewById<TextView>(R.id.dice4).apply {
+                        visibility = View.INVISIBLE
+                    }
+                } else if (selectedItem == "2 dices") {
+                    findViewById<TextView>(R.id.dice1).apply {
+                        visibility = View.VISIBLE
+                    }
+                    findViewById<TextView>(R.id.dice2).apply {
+                        visibility = View.VISIBLE
+                    }
+                    findViewById<TextView>(R.id.dice3).apply {
+                        visibility = View.INVISIBLE
+                    }
+                    findViewById<TextView>(R.id.dice4).apply {
+                        visibility = View.INVISIBLE
+                    }
+
+                } else if (selectedItem == "3 dices") {
+                    findViewById<TextView>(R.id.dice1).apply {
+                        visibility = View.VISIBLE
+                    }
+                    findViewById<TextView>(R.id.dice2).apply {
+                        visibility = View.VISIBLE
+                    }
+                    findViewById<TextView>(R.id.dice3).apply {
+                        visibility = View.VISIBLE
+                    }
+                    findViewById<TextView>(R.id.dice4).apply {
+                        visibility = View.INVISIBLE
+                    }
+
+                } else if (selectedItem == "4 dices") {
+                    findViewById<TextView>(R.id.dice1).apply {
+                        visibility = View.VISIBLE
+                    }
+                    findViewById<TextView>(R.id.dice2).apply {
+                        visibility = View.VISIBLE
+                    }
+                    findViewById<TextView>(R.id.dice3).apply {
+                        visibility = View.VISIBLE
+                    }
+                    findViewById<TextView>(R.id.dice4).apply {
+                        visibility = View.VISIBLE
+                    }
+
+                }
+            }
+
+        }
+
+
+
     }
+
+    fun View.toggleVisibility() {
+        if (visibility == View.VISIBLE) {
+            visibility = View.INVISIBLE
+        } else {
+            visibility = View.VISIBLE
+        }
+    }
+
 
     fun diceRoll(view: View){
         val randomValues = List(4) { Random.nextInt(1, 7) }
