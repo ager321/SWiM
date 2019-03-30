@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.content.Intent
+import android.view.Menu
 import android.widget.Button
 import android.widget.Toast
 
@@ -12,6 +13,7 @@ import android.widget.Toast
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         configureSoonButton()
@@ -25,6 +27,11 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, R.string.two_weeks_toast_text, Toast.LENGTH_LONG).show()
             true
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
     }
 
 

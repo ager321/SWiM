@@ -2,16 +2,18 @@ package com.example.boardgamehelper
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.View
 import android.widget.*
 import kotlin.random.Random
+
 class DiceActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dice)
-
-
+        setSupportActionBar(findViewById(R.id.dice_toolbar))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
         val spinner: Spinner = findViewById(R.id.spinner)
@@ -29,7 +31,7 @@ class DiceActivity : AppCompatActivity() {
 
 
 
-        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
 
             }
@@ -97,12 +99,14 @@ class DiceActivity : AppCompatActivity() {
         }
 
 
-
     }
 
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
 
-
-    fun diceRoll(view: View){
+    fun diceRoll(view: View) {
         val randomValues = List(4) { Random.nextInt(1, 7) }
         findViewById<TextView>(R.id.dice1).apply {
             text = randomValues[0].toString()

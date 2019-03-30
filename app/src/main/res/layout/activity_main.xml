@@ -18,19 +18,23 @@
             android:text="@string/dice_button_text"
             android:layout_width="match_parent"
             android:background="@drawable/round_button"
-            android:layout_height="wrap_content" android:id="@+id/dice_button"
+            android:layout_height="wrap_content"
+            android:id="@+id/dice_button"
             android:onClick="swichToVirtualDice"/>
     <Button
             android:text="@string/star_realms_button_text"
             android:layout_width="match_parent"
             android:background="@drawable/round_button"
-            android:layout_height="wrap_content" android:id="@+id/star_realms_button"
+            android:layout_height="wrap_content"
+            android:id="@+id/star_realms_button"
             android:onClick="swichToStarRealmsHelper"/>
     <Button
             android:text="@string/soon_button_text"
             android:layout_width="match_parent"
             android:background="@drawable/round_button"
-            android:layout_height="wrap_content" android:id="@+id/soon_button" android:onClick="buttonSoonOnClick"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/soon_button"
+            android:onClick="buttonSoonOnClick"/>
 
 </LinearLayout>
 
