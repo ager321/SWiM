@@ -19,7 +19,4 @@ class TicketEuropeFragment : Fragment() {
         return view
     }
 
-    companion object {
-        private val TAG = "Europe"
-    }
 }
