@@ -10,6 +10,8 @@
     <string name="settings_text">settings</string>
     <string name="about_text">About</string>
     <string name="account_text">Account</string>
+    <string name="germany_text">Ticket To Ride: Germany</string>
+    <string name="europe_text">Ticket To Ride: Europe</string>
     <string-array name="dices_array">
         <item>1 dice</item>
         <item>2 dices</item>
