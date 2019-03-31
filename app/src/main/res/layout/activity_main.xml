@@ -34,7 +34,7 @@
             android:background="@drawable/round_button"
             android:layout_height="wrap_content"
             android:id="@+id/soon_button"
-            android:onClick="buttonSoonOnClick"/>
+            android:onClick="switchToTicketToRide"/>
 
 </LinearLayout>
 

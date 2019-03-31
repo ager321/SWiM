@@ -2,27 +2,35 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
           package="com.example.boardgamehelper">
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
             android:allowBackup="true"
             android:icon="@drawable/black_dice"
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            tools:ignore="GoogleAppIndexingWarning"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".StarRealmsHelper"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".TicketToRideActivity"
                   android:parentActivityName=".MainActivity">
         </activity>
-
-        <activity android:name=".DiceActivity"
-                  android:parentActivityName=".MainActivity">
+        <activity
+                android:name=".StarRealmsHelper"
+                android:parentActivityName=".MainActivity">
         </activity>
-        <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme.Launcher">
+        <activity
+                android:name=".DiceActivity"
+                android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+                android:name=".MainActivity"
+                android:theme="@style/AppTheme.Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>

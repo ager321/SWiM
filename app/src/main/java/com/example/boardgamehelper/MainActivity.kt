@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        configureSoonButton()
         setSupportActionBar(findViewById(R.id.main_activity_toolbar))
     }
 
@@ -42,6 +41,10 @@ class MainActivity : AppCompatActivity() {
 
     fun swichToStarRealmsHelper(view: View) {
         val intent = Intent(this, StarRealmsHelper::class.java)
+        startActivity(intent)
+    }
+    fun switchToTicketToRide(view: View) {
+        val intent = Intent(this, TicketToRideActivity::class.java)
         startActivity(intent)
     }
 
