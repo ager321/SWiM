@@ -19,9 +19,9 @@ class TicketToRideActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val adapter = SegmentPagerAdapter(supportFragmentManager)
-        adapter.addFragment(TicketGermanyFragment() , " Ger ")
-        adapter.addFragment(TicketEuropeFragment() , " Eur ")
-        adapter.addFragment(TicketUKFragment() , " UK ")
+        adapter.addFragment(TicketGermanyFragment() , getString(R.string.ger_text))
+        adapter.addFragment(TicketEuropeFragment() , getString(R.string.eur_text))
+        adapter.addFragment(TicketUKFragment() , getString(R.string.uk_text))
         viewPager.adapter = adapter
         tabs.setupWithViewPager(viewPager)
 

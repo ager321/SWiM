@@ -34,7 +34,7 @@ class StarRealmsHelper : AppCompatActivity() {
             // Initialize a new instance of
             val builder = AlertDialog.Builder(this@StarRealmsHelper)
             builder.setTitle("Button background color")
-            builder.setMessage("Are you want to set the button background color to RED?")
+            builder.setMessage("Do you want to set the button color to red?")
 
             builder.setPositiveButton("YES"){dialog, which ->
                 change_theme.setBackgroundColor(RED)
@@ -50,11 +50,12 @@ class StarRealmsHelper : AppCompatActivity() {
             dialog.show()
         }
 
-        button.setOnClickListener {
+        change_theme_frg.setOnClickListener {
+            val ft = getSupportFragmentManager().beginTransaction()
+            val newFragment = ThemeChangeDialog.newInstance("Do you want to set the button color to blue?")
+            newFragment.show(ft, "dialog")
         }
-        val ft = getSupportFragmentManager().beginTransaction()
-        val newFragment = ThemeChangeDialog.newInstance("content")
-        newFragment.show(ft, "dialog")
+
 
     }
 

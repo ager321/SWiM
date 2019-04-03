@@ -20,7 +20,7 @@
                 android:layout_height="wrap_content"
                 android:text="Lorem epsumum is a dummy text"
                 android:textColor="@color/colorPrimary"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:textStyle="normal" />
 
         <LinearLayout
@@ -44,7 +44,7 @@
                     android:layout_alignParentLeft="true"
                     android:text="cancel"
                     android:textColor="@color/colorDice"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
             />
 

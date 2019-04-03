@@ -13,6 +13,14 @@
     <string name="germany_text">Ticket To Ride: Germany</string>
     <string name="europe_text">Ticket To Ride: Europe</string>
     <string name="change_color">Change color</string>
+
+    <string name="ger_text">UK</string>
+    <string name="uk_text">GER</string>
+    <string name="eur_text">EUR</string>
+
+
+
+
     <string-array name="dices_array">
         <item>1 dice</item>
         <item>2 dices</item>
