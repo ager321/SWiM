@@ -12,11 +12,6 @@
             android:layout_marginStart="18dp" android:layout_marginTop="32dp" android:layout_alignParentTop="true"
             android:rotation="180"/>
 
-    <Button
-            android:layout_width="150dp"
-            android:layout_height="100dp" android:id="@+id/button2"
-            android:layout_alignParentEnd="true" android:layout_marginEnd="33dp"
-            android:layout_alignParentBottom="true" android:layout_marginBottom="42dp"/>
     <Switch
             android:layout_width="131dp"
             android:layout_height="59dp" android:id="@+id/switch1"
@@ -27,7 +22,8 @@
             android:layout_width="104dp"
             android:layout_height="70dp" android:id="@+id/switch2"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="42dp" android:layout_toStartOf="@+id/button2" android:layout_marginEnd="47dp"/>
+            android:layout_marginBottom="44dp" android:layout_toStartOf="@+id/change_theme"
+            android:layout_marginEnd="70dp"/>
     <ImageView
             android:layout_width="172dp"
             android:layout_height="179dp"
@@ -38,9 +34,10 @@
             android:layout_marginEnd="114dp" android:layout_alignParentBottom="true"
     />
     <Button
-            android:text="@string/change_theme"
+            android:text="@string/change_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/change_theme"
-            android:layout_marginTop="65dp" android:layout_alignParentEnd="true" android:layout_marginEnd="109dp"
-            android:layout_below="@+id/button"/>
+            android:layout_alignParentEnd="true" android:layout_marginEnd="37dp"
+            android:layout_alignParentBottom="true" android:layout_marginBottom="52dp"
+    />
 </RelativeLayout>

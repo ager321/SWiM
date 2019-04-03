@@ -12,7 +12,7 @@
     <string name="account_text">Account</string>
     <string name="germany_text">Ticket To Ride: Germany</string>
     <string name="europe_text">Ticket To Ride: Europe</string>
-    <string name="change_theme">Change theme</string>
+    <string name="change_color">Change color</string>
     <string-array name="dices_array">
         <item>1 dice</item>
         <item>2 dices</item>
