@@ -19,14 +19,6 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.main_activity_toolbar))
     }
 
-    private fun configureSoonButton() {
-
-        val button: Button = findViewById(R.id.soon_button)
-        button.setOnLongClickListener {
-            Toast.makeText(this@MainActivity, R.string.two_weeks_toast_text, Toast.LENGTH_LONG).show()
-            true
-        }
-    }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
@@ -47,12 +39,23 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, TicketToRideActivity::class.java)
         startActivity(intent)
     }
+    fun switchToCamera(view: View) {
+        val intent = Intent(this, Camera::class.java)
+        startActivity(intent)
+    }
 
 
     fun buttonSoonOnClick(view: View) {
         Toast.makeText(this@MainActivity, R.string.soon_toast_text, Toast.LENGTH_SHORT).show()
     }
+    private fun configureSoonButton() {
 
+        val button: Button = findViewById(R.id.soon_button)
+        button.setOnLongClickListener {
+            Toast.makeText(this@MainActivity, R.string.two_weeks_toast_text, Toast.LENGTH_LONG).show()
+            true
+        }
+    }
 
 }
 
