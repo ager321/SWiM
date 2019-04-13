@@ -8,6 +8,7 @@ import android.content.Intent
 import android.view.Menu
 import android.widget.Button
 import android.widget.Toast
+import com.facebook.stetho.Stetho
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.main_activity_toolbar))
+        Stetho.initializeWithDefaults(this);
     }
 
 
@@ -41,6 +43,10 @@ class MainActivity : AppCompatActivity() {
     }
     fun switchToCamera(view: View) {
         val intent = Intent(this, Camera::class.java)
+        startActivity(intent)
+    }
+    fun switchToHighscores(view: View) {
+        val intent = Intent(this, HighscoresActivity::class.java)
         startActivity(intent)
     }
 
