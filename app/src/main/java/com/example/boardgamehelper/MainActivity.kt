@@ -1,24 +1,44 @@
 package com.example.boardgamehelper
 
 
+import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.content.Intent
+import android.content.SharedPreferences
 import android.view.Menu
 import android.widget.Button
 import android.widget.Toast
 import com.facebook.stetho.Stetho
+import kotlinx.android.synthetic.main.activity_camera.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
+
+    private var PREFS_NAME = "language"
+    var lang : String? = "eng"
+    lateinit var sharedPref : SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.main_activity_toolbar))
-        Stetho.initializeWithDefaults(this);
+        Stetho.initializeWithDefaults(this)
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        sharedPref = getSharedPreferences( PREFS_NAME, Context.MODE_PRIVATE)
+        lang = sharedPref.getString("lang", "eng")
+        if(lang.equals("eng")){
+            camera_button.text = resources.getText(R.string.camera_button_text)
+        }else{
+            camera_button.text = resources.getText(R.string.camera_button_text_pl)
+        }
     }
 
 

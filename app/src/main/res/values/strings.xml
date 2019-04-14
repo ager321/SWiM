@@ -14,11 +14,16 @@
     <string name="europe_text">Ticket To Ride: Europe</string>
     <string name="change_color">Change color</string>
     <string name="camera_button_text">Camera</string>
+    <string name="camera_button_text_pl">Aparat</string>
     <string name="ger_text">UK</string>
     <string name="uk_text">GER</string>
     <string name="eur_text">EUR</string>
-
-
+    <string name="top_ten">TOP 10</string>
+    <string name="add_score_button_text">Add Score</string>
+    <string name="take_a_photo_eng">Take a photo</string>
+    <string name="take_a_photo_pl">Zrób zdjęcie</string>
+    <string name="lang_switch_pl">Zmień język</string>
+    <string name="lang_switch_eng">Change language</string>
     <string-array name="dices_array">
         <item>1 dice</item>
         <item>2 dices</item>
